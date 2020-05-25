@@ -1,0 +1,273 @@
+Compiled from "swapPairs.scala"
+public final class Swap$ implements scala.App {
+  public static final Swap$ MODULE$;
+
+  private static int[] arr;
+
+  private static int[] swappedArr;
+
+  private static long executionStart;
+
+  private static java.lang.String[] scala$App$$_args;
+
+  private static scala.collection.mutable.ListBuffer<scala.Function0<scala.runtime.BoxedUnit>> scala$App$$initCode;
+
+  public static {};
+    Code:
+       0: new           #2                  // class Swap$
+       3: dup
+       4: invokespecial #52                 // Method "<init>":()V
+       7: putstatic     #54                 // Field MODULE$:LSwap$;
+      10: getstatic     #54                 // Field MODULE$:LSwap$;
+      13: invokestatic  #58                 // InterfaceMethod scala/App.$init$:(Lscala/App;)V
+      16: getstatic     #54                 // Field MODULE$:LSwap$;
+      19: new           #60                 // class Swap$delayedInit$body
+      22: dup
+      23: getstatic     #54                 // Field MODULE$:LSwap$;
+      26: invokespecial #63                 // Method Swap$delayedInit$body."<init>":(LSwap$;)V
+      29: invokevirtual #67                 // Method delayedInit:(Lscala/Function0;)V
+      32: invokestatic  #72                 // Method scala/runtime/Statics.releaseFence:()V
+      35: return
+
+  public final java.lang.String[] args();
+    Code:
+       0: aload_0
+       1: invokestatic  #78                 // InterfaceMethod scala/App.args$:(Lscala/App;)[Ljava/lang/String;
+       4: areturn
+
+  public void delayedInit(scala.Function0<scala.runtime.BoxedUnit>);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokestatic  #85                 // InterfaceMethod scala/App.delayedInit$:(Lscala/App;Lscala/Function0;)V
+       5: return
+
+  public final void main(java.lang.String[]);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokestatic  #92                 // InterfaceMethod scala/App.main$:(Lscala/App;[Ljava/lang/String;)V
+       5: return
+
+  public final long executionStart();
+    Code:
+       0: getstatic     #95                 // Field executionStart:J
+       3: lreturn
+
+  public java.lang.String[] scala$App$$_args();
+    Code:
+       0: getstatic     #97                 // Field scala$App$$_args:[Ljava/lang/String;
+       3: areturn
+
+  public void scala$App$$_args_$eq(java.lang.String[]);
+    Code:
+       0: aload_1
+       1: putstatic     #97                 // Field scala$App$$_args:[Ljava/lang/String;
+       4: return
+
+  public scala.collection.mutable.ListBuffer<scala.Function0<scala.runtime.BoxedUnit>> scala$App$$initCode();
+    Code:
+       0: getstatic     #103                // Field scala$App$$initCode:Lscala/collection/mutable/ListBuffer;
+       3: areturn
+
+  public final void scala$App$_setter_$executionStart_$eq(long);
+    Code:
+       0: lload_1
+       1: putstatic     #95                 // Field executionStart:J
+       4: return
+
+  public final void scala$App$_setter_$scala$App$$initCode_$eq(scala.collection.mutable.ListBuffer<scala.Function0<scala.runtime.BoxedUnit>>);
+    Code:
+       0: aload_1
+       1: putstatic     #103                // Field scala$App$$initCode:Lscala/collection/mutable/ListBuffer;
+       4: return
+
+  public <A> java.lang.Object swapPairs(java.lang.Object, scala.reflect.ClassTag<A>);
+    Code:
+       0: getstatic     #117                // Field scala/collection/ArrayOps$.MODULE$:Lscala/collection/ArrayOps$;
+       3: getstatic     #122                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+       6: aload_1
+       7: invokevirtual #126                // Method scala/Predef$.genericArrayOps:(Ljava/lang/Object;)Ljava/lang/Object;
+      10: iconst_2
+      11: invokevirtual #130                // Method scala/collection/ArrayOps$.grouped$extension:(Ljava/lang/Object;I)Lscala/collection/Iterator;
+      14: aload_2
+      15: invokedynamic #151,  0            // InvokeDynamic #0:apply:(Lscala/reflect/ClassTag;)Lscala/Function1;
+      20: invokeinterface #157,  2          // InterfaceMethod scala/collection/Iterator.flatMap:(Lscala/Function1;)Lscala/collection/Iterator;
+      25: aload_2
+      26: invokeinterface #161,  2          // InterfaceMethod scala/collection/Iterator.toArray:(Lscala/reflect/ClassTag;)Ljava/lang/Object;
+      31: areturn
+
+  public int[] arr();
+    Code:
+       0: getstatic     #166                // Field arr:[I
+       3: areturn
+
+  public int[] swappedArr();
+    Code:
+       0: getstatic     #168                // Field swappedArr:[I
+       3: areturn
+
+  public static final scala.collection.mutable.ArraySeq $anonfun$swapPairs$1(scala.reflect.ClassTag, java.lang.Object);
+    Code:
+       0: aload_1
+       1: astore_3
+       2: aload_3
+       3: ifnull        137
+       6: getstatic     #175                // Field scala/Array$.MODULE$:Lscala/Array$;
+       9: aload_3
+      10: invokevirtual #178                // Method scala/Array$.unapplySeq:(Ljava/lang/Object;)Ljava/lang/Object;
+      13: astore        4
+      15: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+      18: aload         4
+      20: invokevirtual #185                // Method scala/Array$UnapplySeqWrapper$.isEmpty$extension:(Ljava/lang/Object;)Z
+      23: ifne          134
+      26: new           #14                 // class scala/Array$UnapplySeqWrapper
+      29: dup
+      30: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+      33: aload         4
+      35: invokevirtual #188                // Method scala/Array$UnapplySeqWrapper$.get$extension:(Ljava/lang/Object;)Ljava/lang/Object;
+      38: invokespecial #191                // Method scala/Array$UnapplySeqWrapper."<init>":(Ljava/lang/Object;)V
+      41: ifnull        134
+      44: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+      47: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+      50: aload         4
+      52: invokevirtual #188                // Method scala/Array$UnapplySeqWrapper$.get$extension:(Ljava/lang/Object;)Ljava/lang/Object;
+      55: iconst_2
+      56: invokevirtual #195                // Method scala/Array$UnapplySeqWrapper$.lengthCompare$extension:(Ljava/lang/Object;I)I
+      59: iconst_0
+      60: if_icmpne     134
+      63: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+      66: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+      69: aload         4
+      71: invokevirtual #188                // Method scala/Array$UnapplySeqWrapper$.get$extension:(Ljava/lang/Object;)Ljava/lang/Object;
+      74: iconst_0
+      75: invokevirtual #199                // Method scala/Array$UnapplySeqWrapper$.apply$extension:(Ljava/lang/Object;I)Ljava/lang/Object;
+      78: astore        5
+      80: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+      83: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+      86: aload         4
+      88: invokevirtual #188                // Method scala/Array$UnapplySeqWrapper$.get$extension:(Ljava/lang/Object;)Ljava/lang/Object;
+      91: iconst_1
+      92: invokevirtual #199                // Method scala/Array$UnapplySeqWrapper$.apply$extension:(Ljava/lang/Object;I)Ljava/lang/Object;
+      95: astore        6
+      97: getstatic     #122                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+     100: getstatic     #175                // Field scala/Array$.MODULE$:Lscala/Array$;
+     103: getstatic     #204                // Field scala/runtime/ScalaRunTime$.MODULE$:Lscala/runtime/ScalaRunTime$;
+     106: iconst_2
+     107: anewarray     #4                  // class java/lang/Object
+     110: dup
+     111: iconst_0
+     112: aload         6
+     114: aastore
+     115: dup
+     116: iconst_1
+     117: aload         5
+     119: aastore
+     120: invokevirtual #208                // Method scala/runtime/ScalaRunTime$.genericWrapArray:(Ljava/lang/Object;)Lscala/collection/immutable/ArraySeq;
+     123: aload_0
+     124: invokevirtual #211                // Method scala/Array$.apply:(Lscala/collection/immutable/Seq;Lscala/reflect/ClassTag;)Ljava/lang/Object;
+     127: invokevirtual #213                // Method scala/Predef$.genericWrapArray:(Ljava/lang/Object;)Lscala/collection/mutable/ArraySeq;
+     130: astore_2
+     131: goto          265
+     134: goto          140
+     137: goto          140
+     140: aload_3
+     141: ifnull        253
+     144: getstatic     #175                // Field scala/Array$.MODULE$:Lscala/Array$;
+     147: aload_3
+     148: invokevirtual #178                // Method scala/Array$.unapplySeq:(Ljava/lang/Object;)Ljava/lang/Object;
+     151: astore        7
+     153: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+     156: aload         7
+     158: invokevirtual #185                // Method scala/Array$UnapplySeqWrapper$.isEmpty$extension:(Ljava/lang/Object;)Z
+     161: ifne          250
+     164: new           #14                 // class scala/Array$UnapplySeqWrapper
+     167: dup
+     168: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+     171: aload         7
+     173: invokevirtual #188                // Method scala/Array$UnapplySeqWrapper$.get$extension:(Ljava/lang/Object;)Ljava/lang/Object;
+     176: invokespecial #191                // Method scala/Array$UnapplySeqWrapper."<init>":(Ljava/lang/Object;)V
+     179: ifnull        250
+     182: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+     185: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+     188: aload         7
+     190: invokevirtual #188                // Method scala/Array$UnapplySeqWrapper$.get$extension:(Ljava/lang/Object;)Ljava/lang/Object;
+     193: iconst_1
+     194: invokevirtual #195                // Method scala/Array$UnapplySeqWrapper$.lengthCompare$extension:(Ljava/lang/Object;I)I
+     197: iconst_0
+     198: if_icmpne     250
+     201: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+     204: getstatic     #181                // Field scala/Array$UnapplySeqWrapper$.MODULE$:Lscala/Array$UnapplySeqWrapper$;
+     207: aload         7
+     209: invokevirtual #188                // Method scala/Array$UnapplySeqWrapper$.get$extension:(Ljava/lang/Object;)Ljava/lang/Object;
+     212: iconst_0
+     213: invokevirtual #199                // Method scala/Array$UnapplySeqWrapper$.apply$extension:(Ljava/lang/Object;I)Ljava/lang/Object;
+     216: astore        8
+     218: getstatic     #122                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+     221: getstatic     #175                // Field scala/Array$.MODULE$:Lscala/Array$;
+     224: getstatic     #204                // Field scala/runtime/ScalaRunTime$.MODULE$:Lscala/runtime/ScalaRunTime$;
+     227: iconst_1
+     228: anewarray     #4                  // class java/lang/Object
+     231: dup
+     232: iconst_0
+     233: aload         8
+     235: aastore
+     236: invokevirtual #208                // Method scala/runtime/ScalaRunTime$.genericWrapArray:(Ljava/lang/Object;)Lscala/collection/immutable/ArraySeq;
+     239: aload_0
+     240: invokevirtual #211                // Method scala/Array$.apply:(Lscala/collection/immutable/Seq;Lscala/reflect/ClassTag;)Ljava/lang/Object;
+     243: invokevirtual #213                // Method scala/Predef$.genericWrapArray:(Ljava/lang/Object;)Lscala/collection/mutable/ArraySeq;
+     246: astore_2
+     247: goto          265
+     250: goto          256
+     253: goto          256
+     256: new           #215                // class scala/MatchError
+     259: dup
+     260: aload_3
+     261: invokespecial #216                // Method scala/MatchError."<init>":(Ljava/lang/Object;)V
+     264: athrow
+     265: aload_2
+     266: areturn
+
+  public final void delayedEndpoint$Swap$1();
+    Code:
+       0: getstatic     #226                // Field scala/runtime/RichInt$.MODULE$:Lscala/runtime/RichInt$;
+       3: getstatic     #122                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+       6: iconst_1
+       7: invokevirtual #230                // Method scala/Predef$.intWrapper:(I)I
+      10: bipush        100
+      12: invokevirtual #234                // Method scala/runtime/RichInt$.to$extension:(II)Lscala/collection/immutable/Range$Inclusive;
+      15: getstatic     #239                // Field scala/reflect/ClassTag$.MODULE$:Lscala/reflect/ClassTag$;
+      18: invokevirtual #243                // Method scala/reflect/ClassTag$.Int:()Lscala/reflect/ManifestFactory$IntManifest;
+      21: invokevirtual #244                // Method scala/collection/immutable/Range$Inclusive.toArray:(Lscala/reflect/ClassTag;)Ljava/lang/Object;
+      24: checkcast     #245                // class "[I"
+      27: putstatic     #166                // Field arr:[I
+      30: aload_0
+      31: aload_0
+      32: invokevirtual #247                // Method arr:()[I
+      35: getstatic     #239                // Field scala/reflect/ClassTag$.MODULE$:Lscala/reflect/ClassTag$;
+      38: invokevirtual #243                // Method scala/reflect/ClassTag$.Int:()Lscala/reflect/ManifestFactory$IntManifest;
+      41: invokevirtual #249                // Method swapPairs:(Ljava/lang/Object;Lscala/reflect/ClassTag;)Ljava/lang/Object;
+      44: checkcast     #245                // class "[I"
+      47: putstatic     #168                // Field swappedArr:[I
+      50: getstatic     #122                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+      53: getstatic     #122                // Field scala/Predef$.MODULE$:Lscala/Predef$;
+      56: aload_0
+      57: invokevirtual #251                // Method swappedArr:()[I
+      60: invokevirtual #255                // Method scala/Predef$.wrapIntArray:([I)Lscala/collection/mutable/ArraySeq$ofInt;
+      63: ldc_w         #257                // String
+      66: invokevirtual #261                // Method scala/collection/mutable/ArraySeq$ofInt.mkString:(Ljava/lang/String;)Ljava/lang/String;
+      69: invokevirtual #264                // Method scala/Predef$.println:(Ljava/lang/Object;)V
+      72: return
+
+  private Swap$();
+    Code:
+       0: aload_0
+       1: invokespecial #265                // Method java/lang/Object."<init>":()V
+       4: return
+
+  private static java.lang.Object $deserializeLambda$(java.lang.invoke.SerializedLambda);
+    Code:
+       0: aload_0
+       1: invokedynamic #277,  0            // InvokeDynamic #1:lambdaDeserialize:(Ljava/lang/invoke/SerializedLambda;)Ljava/lang/Object;
+       6: areturn
+}
