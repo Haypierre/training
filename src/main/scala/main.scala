@@ -1,7 +1,7 @@
 import training._
 
 //Training Entry Point.
-//Problemes ranged from easy to hard.
+//Problems ranged from easy to hard.
 //Some come from LeetCode, others from Coding Interviews / Assignement.
 
 
