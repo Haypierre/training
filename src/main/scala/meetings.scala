@@ -17,11 +17,9 @@ object Meetings {
                     => (compareTimes(a,c,min), compareTimes(b,d,max)) 
         }
 
-        val result : List[(String, String)] = merged.sliding(2,1).collect {
+        merged.sliding(2,1).collect {
             case List(x,y) if (timeToInt(y._1) - timeToInt(x._2) >= meetingDuration) => (x._2, y._1)    
         }.toList
-       
-        result
     }
 
     def min(a: Int, b: Int) = a < b
