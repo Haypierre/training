@@ -1,3 +1,6 @@
+//You can find the assignment questions in the resources directory at the root of this repository.
+//In the same location is the transactions.txt file.
+
 package training
 
 import scala.io.Source

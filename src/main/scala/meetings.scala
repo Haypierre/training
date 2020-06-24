@@ -1,7 +1,7 @@
 package training
 
 //Google interview question
-//Given a list of scheduled meetings of two employees, find all possible free time slot for those employees to have a meeting.
+//Given a list of scheduled meetings of two employees, find all possible free time slots for them to have a meeting.
 //l1 = [[9:00,10:00], [11:00,12:30], [14:30,17:00]]
 //l2 = [[8:10,10:30], [10:30,12:00], [16:30,18:00]]
 //output = [12:30, 14:30]
@@ -17,11 +17,9 @@ object Meetings {
                     => (compareTimes(a,c,min), compareTimes(b,d,max)) 
         }
 
-        val result : List[(String, String)] = merged.sliding(2,1).collect {
+        merged.sliding(2,1).collect {
             case List(x,y) if (timeToInt(y._1) - timeToInt(x._2) >= meetingDuration) => (x._2, y._1)    
         }.toList
-       
-        result
     }
 
     def min(a: Int, b: Int) = a < b
