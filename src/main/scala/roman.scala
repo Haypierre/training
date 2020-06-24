@@ -32,7 +32,7 @@ object RomanNumbers {
 
             val k = s.slice(0,2)
             if (binary.contains(k))
-                helper(s.tail.tail, acc + binary(k))
+                helper(s.slice(2, s.size), acc + binary(k))
             else
                 helper(s.tail, acc + unary(k(0)))
         }

@@ -1,11 +1,11 @@
 import training._
 
 //Training Entry Point.
-//Problemes ranged from easy to hard.
+//Problems ranged from easy to hard.
 //Some come from LeetCode, others from Coding Interviews / Assignement.
 
 
-object main extends App {
+object Main extends App {
 
     //swap pairs in an array
     println(Swap.swapPairs((1 to 100).toArray).mkString(" "))
@@ -13,6 +13,8 @@ object main extends App {
     println(Sorted.isSorted(Array(9,1,34), Sorted.f))
     //fibonacci function - tailrec flavor
     println(Fibonacci.fib(15))
+    //Given an array of numbers and a number k, return indexes of two numbers that sums to K.
+    println(TwoSum.compute(Array(10,15,3,7), 17))
     //stock price
     println(Minmax.maxProfit(Array(1,5,145,34,56,24,567)))
     //bracket validator
